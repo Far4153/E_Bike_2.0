@@ -6,28 +6,35 @@ import { Link } from 'react-router-dom';
 import products from "../data/products";
 import Navbar from "./Navbar";
 import { ShoppingCart } from "lucide-react";
-
+import { useCart } from './CartContext';
 
 function Bikes(){
-    
-    
-    // Define Cart and size states directly in the Bikes component
-    const [Cart, setCart] = useState([]);
-    const [Csize, setSize] = useState(0);
 
-    useEffect(()=> {
-        setSize(Cart.length);
-        console.log("upadtedsize", Csize);
-        
-    },[Cart]);
-    
+    const [Cart, setCart] = useState([]);
+   
+    const { cart } = useCart();
+  
+    const cartSize = cart.length;
+    console.log(cartSize);
+    // console.log(cartSize);
+
+    useEffect(() => {
+        console.log(cartSize);
+    }, [cartSize]);
+
+
     const handleClick = (item) => {
+        // Check if the item is already present in the cart
+        const isPresent = Cart.some((cartItem) => cartItem.id === item.id);
+      
+        if (isPresent) {
+            return;
+        }
+    
         // Update Cart state by adding the new item
         setCart([...Cart, item]);
-        console.log("upadtedsize", Csize);
+        
     }
-
-
 
     return (
         <>
@@ -54,7 +61,7 @@ function Bikes(){
                     
                     <div className="left-sec">
                     <ul><Link to="/Cart" className="bikescart"><ShoppingCart color="#ffffff" size={35}/>
-                    <span>{Csize}</span></Link></ul>
+                    <span>{cartSize}</span></Link></ul>
                     <div className="Search-bar">
                     <div className="search-icon"><Search color="#000000" /></div>
                     <input placeholder=" Search for Bikess" className="search-input" ></input>
@@ -66,7 +73,8 @@ function Bikes(){
                 </div>
                 <div className="bikes-Grid">
                     <div className="bikes-content">
-                    {products.map(item => (<Link key={item.id} to={`/Product_page/${item.id}`}><Card item={item} key={item.id} handleClick={handleClick} /></Link>))}
+                    {products.map(item => (<Link key={item.id} to={`/Product_page/${item.id}`}>
+                        <Card item={item} key={item.id} handleClick={handleClick} /></Link>))}
                     </div>
 
                 </div>

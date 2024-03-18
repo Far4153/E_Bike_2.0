@@ -24,7 +24,7 @@ function Mainbody(){
         } 
     return(
         <div className="main">
-            <Navbar showCSection={true}  size={Cart.length} />
+            <Navbar showCSection={true}  size={Cart.length} showCartSection={true}/>
             <Left_part />
             <Right_part />
         </div>

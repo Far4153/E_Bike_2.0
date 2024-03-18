@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function Navbar({ showCSection,size }) {
+function Navbar({ showCSection,showCartSection,size }) {
 
   const [open , setOpen]= useState(false);
   
@@ -42,10 +42,16 @@ function Navbar({ showCSection,size }) {
         <Link to="/Bikes">
         <p>Bikes</p>
         </Link>
-        <Link to="/Cart" className="cartsec">
-        <p>Cart</p>
-        <span>{size}</span>
-        </Link>
+        {showCartSection && (
+          <Link
+            to="/Cart"
+            className={`cartsec ${open ? 'active' : 'inactive'}`}
+          >
+            <p>Cart</p>
+            <span>{size}</span>
+          </Link>
+        )}
+        
         <Link to="/About_Us">
         <p>About Us</p>
         </Link>

@@ -1,46 +1,45 @@
 
 import React, { useState} from "react";
 import { Link, useParams } from 'react-router-dom'; 
-
 import Review from "./Review";
 import products from "../data/products";
-
 import Navbar from "./Navbar";
-
-
-
-
 import "../styles/Product_page.css";
+import Product from "./Card";
+import { useCart } from './CartContext'; 
+import { ShoppingCart } from "lucide-react";
+
 
 
 
 
 function Product_page(){
+ 
 
-
-
-    let {ProductId}=useParams();  //  if i want to render the url's id i need to use this hook
-    // this  stores id of the product we have given as a path
-
-    let product=products.find((p)=>p.id==ProductId)
-    
-    // const [cart, setCart] = useState([]);
-  
-
-  
-    
-
+    const { addToCart } = useCart(); // Get addToCart function from CartContext
+    const { ProductId } = useParams();
+    const product = products.find((p) => p.id === ProductId);
     const [activeTab, setActiveTab] = useState("description");
-
+    const { cart } = useCart();
+  
+    const cartSize = cart.length;
+    console.log(cartSize);
+  
     const handleTabClick = (tab) => {
-        setActiveTab(tab);
-      };
-   
+      setActiveTab(tab);
+    };
+  
+    const handleAddToCart = () => {
+      // Add product to cart
+      addToCart({ id: product.id, name: product.name, price: product.price, image: product.image });
+    };
+
+    const [isHovered, setisHovered]=useState(false);
 
 
     return(
         <div className="product-whole">
-            <div className="inherited-nav"><Navbar showCSection={false} /></div>
+            <div className="inherited-nav"><Navbar showCSection={false} showCartSection={false} /></div>
             <div className="product-page">
                 <div className="product-page-top">
                     <div className="image-grid">
@@ -62,6 +61,8 @@ function Product_page(){
                         </div>
                     </div>
                     <div className="text-grid">
+                    <ul><Link to="/Cart" className="bikescart" onMouseEnter={()=>setisHovered(true)} onMouseLeave={()=>setisHovered(false)}><ShoppingCart  style={{ color: isHovered?"#FF3465" :"#ffffff" }}  size={35}/>
+                    <span>{cartSize}</span></Link></ul>
                         <h3>{product.name}</h3>
                         <img src="/rating.png" />
                         <p id="price">{product.price}</p>
@@ -72,7 +73,7 @@ function Product_page(){
                         </div>
                         <br />
                         <p id="left">only 1 left - make it yours</p>
-                        <button id="add-btn" >Add to cart</button>
+                        <button id="add-btn" onClick={handleAddToCart} >Add to cart</button>
                         <button id="Buy now" >Buy now</button>
 
 
