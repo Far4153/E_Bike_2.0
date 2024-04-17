@@ -196,13 +196,19 @@ padding: 0px;
   border-color: grey; /* Set border color */
 }
 
+.checkout-btn{
+  display: flex;
+  justify-content: center;
+}
+
 .checkout-btn button{
   background-color: #FF3465;
   color: white; /* Text color */
   padding: 10px 10px; /* Padding */
   border: none; /* No border */
   border-radius: 5px; /* Rounded corners */
-  margin-right: 50px; /* Margin between buttons */
-  margin-top: 30px; /* Margin between buttons */
+  margin-right: 0px; /* Margin between buttons */
+  margin-top: 5px; /* Margin between buttons */
   cursor: pointer;
+
 }

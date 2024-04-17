@@ -7,7 +7,8 @@ import Bikes from "./Bikes.jsx";
 import AboutUs from "./AboutUs.jsx";
 import Product_page from "./Product_page.jsx";
 import Cart from "./Cart.jsx";
-import Product from "./Card.jsx";
+// import Product from "./Card.jsx";
+import Checkout from "./Checkout.jsx";
 import { CartProvider } from './CartContext';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/Product_page/:ProductId" element={<Product_page />} />
 
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/Checkout" element={<Checkout />} />
         </Routes>
       </Router>
     </CartProvider>
