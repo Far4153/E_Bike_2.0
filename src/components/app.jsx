@@ -10,6 +10,7 @@ import Cart from "./Cart.jsx";
 // import Product from "./Card.jsx";
 import Checkout from "./Checkout.jsx";
 import { CartProvider } from './CartContext';
+import Payment from "./Payment.jsx"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
 
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Checkout" element={<Checkout />} />
+          <Route path="/Payment" element={<Payment />} />
         </Routes>
       </Router>
     </CartProvider>

@@ -13,34 +13,32 @@ body{
     background-color: #8E2841;
     height: auto; /* Set height to auto */
     position: relative; /* Ensure relative positioning for absolute children */
+    position: fixed;
   }
 
-.checkout-body{
+.checkout-page .checkout-body{
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     margin-left: 20px;
 
 }
 
-.cart-summary-sec{
+.checkout-page .cart-summary-sec{
     background-color: black;
 }
 
 .checkout-body h1{
     margin-left: 20px;
-
-
-    
-
+    margin-top: 80px;
 }
 
 
-.stages{
+.checkout-page .stages{
     display: flex;
     align-items: center; 
 }
 
-.stages hr{
+.checkout-page .stages hr{
     width: 430px;
     margin-bottom: 50px;
     /* background-color: #8E2841; */
@@ -48,22 +46,26 @@ body{
 
 }
 
-.stages img{
+.checkout-page .stages img{
     width: 80px;
 }
 
-.billing-info {
+.checkout-page .billing-info {
     background-color: black;
-    margin: 40px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.billing-info #heading1{
-    margin-top: 0; /* Reset margin-top */
+.checkout-page .billing-info #heading1{
+    margin-top: 25px; /* Reset margin-top */
     margin-bottom: 50px;
     margin-left: 70px;
 }
 
-.billing-info .inputs{
+.checkout-page .billing-info .inputs{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -71,17 +73,20 @@ body{
 
 }
 
-.inputs-left {
-    margin-left: 100px;
+.checkout-page .inputs-left {
+    margin-right: 50px;
+}
+.checkout-page .inputs-right {
+    margin-left: 50px;
 }
 
-.inputs-left, .inputs-right{
+.checkout-page .inputs-left, .inputs-right{
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     gap: 20px;
 }
 
-.inputs input{
+.checkout-page .inputs input{
     width: 350px;
     height: 35px;
     margin-bottom: 20px;
@@ -91,4 +96,96 @@ body{
     box-shadow: 1px 1px 75px rgb(61, 59, 59);
 }
   
+.checkout-page .cart-summary-sec #heading2{
+    width: 50px;
+    padding: 0;
+    margin: 0;
+}
 
+.checkout-page .cart-summary-sec hr{
+
+    padding: 0;
+    margin: 0;
+}
+
+
+   
+      .checkout-pagetable {
+        width: 100%;
+      }
+      
+      .cart-summary-sec table {
+        margin-top: 10px; /* Add some margin to separate the heading from the table */
+      }
+      
+      .cart-summary-sec td {
+        padding: 5px; /* Adjust cell padding as needed */
+      }
+      
+      .cart-summary-sec hr {
+        margin: 0; /* Reset margin */
+        border: none;
+        border-top: 1px solid #ccc; /* Add border-top instead of hr to separate rows */
+      } /* Adjust margin as needed */
+
+      .checkout-page table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+
+}
+.checkout-page #heading2 {
+    display: inline-block;
+    
+    width: 100%;
+    text-align: center; /* Center the heading */
+  }
+
+
+  .checkout-page .cart-summary-sec .order{
+    margin-top: 50px;
+}
+
+
+.checkout-page .cart-cont{
+    margin: 30px;
+}
+
+
+.checkout-page button{
+    background-color: #8E2841;
+    color: white; /* Text color */
+    padding: 10px 10px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 0px; /* Margin between buttons */
+    margin-top: 5px; /* Margin between buttons */
+    cursor: pointer;
+    margin-bottom: 10px;
+  
+  }
+  .checkout-page .btn-sec {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-page .btn-sec button {
+    flex-grow: 1;
+}
+
+
+.checkout-page .cart-summary-sec{
+   
+        position: fixed;
+        top: 0px;
+        right: 0;
+        height:100%;
+        width: 400px;
+    
+        overflow-y: auto;
+        
+    
+}

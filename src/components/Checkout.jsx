@@ -3,6 +3,8 @@ import "../styles/Checkout.css";
 import React, {useState}from 'react';
 import products from "../data/products";
 import { useCart } from './CartContext';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -39,30 +41,40 @@ const Checkout = () => {
                     <div className="inputs">
                         <div className="inputs-left">
                             <input placeholder="First Name"></input>
-                            <input placeholder="First Name"></input>
-                            <input placeholder="First Name"></input>
-                            <input placeholder="First Name"></input>
+                            <input placeholder="Email"></input>
+                            <input placeholder="Address line 1"></input>
+                            <input placeholder="City"></input>
+                            <input placeholder="State"></input>
                         </div>
                         <div className="inputs-right">
-                            <input placeholder="First Name"></input>
-                            <input placeholder="First Name"></input>
-                            <input placeholder="First Name"></input>
-                            <input placeholder="First Name"></input>
+                            <input placeholder="Last Name"></input>
+                            <input placeholder="Phone"></input>
+                            <input placeholder="Address line 2"></input>
+                            <input placeholder="Country"></input>
+                            <input placeholder="Zip code"></input>
                         </div>
 
+
                     </div>
+                  <div className="btn-sec">
+                    <Link to="/Payment"><button>Continue</button></Link>
+                    {/* <button>Continue</button> */}
+                  </div>
                 </div>
             </div>
             <div className="cart-summary-sec">
 
+                <div className="cart-cont">
                 <table>
-                <h3 id="heading2">Cart Summary</h3>
+                <div style={{ display: 'flex' }}>
+                <h3>Cart Summary</h3>
+                </div>
                 <tbody>
                     {cart.map((product) => (
                       <React.Fragment key={product.id}> 
                       <tr>
                         <td>
-                          <img src={product.image} alt={product.name} style={{ width: '100px', height: '100px' }} />
+                          <img src={product.image} alt={product.name} style={{ width: '50px', height: '50px' }} />
                         </td>
                         <td>
                           <p>{product.name}</p>
@@ -70,15 +82,7 @@ const Checkout = () => {
                         <td>
                           <p>{product.price}</p>
                         </td>
-                        <td>
-                          <p><button>+</button></p>
-                        </td>
-                        <td>
-                          <p>{product.price}</p>
-                        </td>
-                        <td>
-                          <p><button>-</button></p>
-                        </td>
+
                       </tr>
                       <tr>
                         <td colSpan="6"><hr /></td>
@@ -110,7 +114,7 @@ const Checkout = () => {
                       </div>
                         <hr></hr>
                       <div className='row'>
-                        <h4>Grand Total</h4>
+                        <h3>Grand Total</h3>
                         <h4>${calculateSubtotal()+20}</h4>
                       </div>
                     </div>
@@ -119,6 +123,7 @@ const Checkout = () => {
                     </div> */}
 
                   </div>
+                </div>
                 </div>
                 </div>
 

@@ -1,0 +1,178 @@
+body{
+    background-color: #1E1E1E;
+    color: #ffffff;
+}
+
+.payment-page .navbar{
+    background-color:#8E2841;
+    height: 50px;
+    margin: 0;
+}
+
+.payment-page .navbar {
+    background-color: #8E2841;
+    height: auto; /* Set height to auto */
+    position: relative; /* Ensure relative positioning for absolute children */
+  }
+
+  .payment-page .checkout-body{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    margin-left: 20px;
+    
+
+}
+
+.payment-page .cart-summary-sec{
+    background-color: black;
+}
+
+.checkout-body h1{
+    margin-left: 20px;
+
+}
+
+
+.payment-page .stages{
+    display: flex;
+    align-items: center; 
+}
+
+.payment-page .stages hr{
+    width: 430px;
+    margin-bottom: 50px;
+    /* background-color: #8E2841; */
+    border-color: #8E2841; 
+
+}
+
+.payment-page .stages img{
+    width: 80px;
+}
+
+
+.checkbox-sec {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    
+}
+
+.checkbox-sec b {
+    padding-bottom: 5px; /* Adjust the padding */
+}
+
+.image-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.debit-img img{
+    width: 350px;
+}
+
+.card-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    gap: 20px; /* Spacing between grid items */
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 300px ;
+}
+
+.card-info p, .card-info input {
+    grid-column: span 1; /* Each item spans one column */
+    /* background-color: #fff; */
+}
+
+.payment-page .cart-summary-sec{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.payment-page .cart-summary-sec #head{
+    width: 400%;
+    height: 100%;
+    justify-content: center;
+}
+
+h3{
+text-align: center;
+
+}
+
+.payment-page .order{
+    margin-top: 30px;
+}
+
+.payment-page .card-info{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.payment-page .cart-summary-sec {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    height:100%;
+    width: 400px;
+
+    overflow-y: auto;
+    
+}
+
+.payment-page input{
+    background-color: transparent;
+    border: 0px solid white;
+    border-bottom: 2px solid white;
+}
+
+input::placeholder {
+    text-align: left;
+    margin-left: 0%;
+    padding-left:0% ;
+}
+
+.payment-page .navbar{
+    position: fixed;
+}
+
+.payment-page .order-box{
+    margin-bottom: 100px;
+}
+
+#proceed-btn{
+    display: flex;
+    justify-content: center;
+
+}
+
+.payment-page .checkout-sec #proceed-btn button {
+    background-color: #8E2841;
+    color: white; /* Text color */
+    padding: 10px 10px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 0px; /* Margin between buttons */
+    margin-top: 5px; /* Margin between buttons */
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+.debit, .credit, .UPI{
+    display: flex;
+    justify-content: space-between;
+    width: 13%;
+
+}
+
+.UPI{
+    width: 10%;
+}
+
+ b{
+    margin-top: 10px;
+}
