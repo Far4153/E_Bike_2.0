@@ -15,12 +15,13 @@ const Payment= () => {
         return cart.reduce((total, product) => total + parseInt(product.price.replace(/\D/g, ''), 10),0);
       };
 
-      const [currentImage, setImageClick] = useState("/uncheckbox.png");
-      const [isChecked, setIsChecked] = useState(false);
+      const uncheckedImage = "/uncheckbox.png";
+      const checkedImage = "/checkbox.png";
+  
+      const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
 
-      function handleImageClick(){
-        setIsChecked(!isChecked);
-        setImageClick(isChecked?'/uncheckbox.png':'/checkbox.png');
+      function handlePaymentMethodClick(method){
+        setSelectedPaymentMethod(method)
       };
 
     return (
@@ -45,49 +46,89 @@ const Payment= () => {
                 </div>
 
                 <div className="checkbox-sec">
-                    <div className="debit">
-                        <img src="checkbox.png" />
+                    <div className="debit" onClick={() => handlePaymentMethodClick('debit')}>
+                        <img src= {selectedPaymentMethod === "debit" ? checkedImage : uncheckedImage}/> 
+                        {/* as uncheckedimage are the constants of js do they need to be in the curlybraces */}
                         <b>Debit Card</b>
                     </div>
-                    <div className="credit">
-                        <img src={currentImage} onClick={handleImageClick} />
+                    <div className="credit" onClick={() => handlePaymentMethodClick("credit")}>
+                        <img src= {selectedPaymentMethod === "credit" ? checkedImage : uncheckedImage} />
                         <b>Credit Card</b>
                     </div>
-                    <div className="UPI">
-                        <img src="uncheckbox.png" />
+                    <div className="UPI" onClick={() => handlePaymentMethodClick("UPI")}>
+                        <img src={selectedPaymentMethod === "UPI"? checkedImage : uncheckedImage} />
                         <b>UPI ID</b>
                     </div>
                 
             
                 </div>
 
-                <div className="image-sec">
-                    <div className="debit-img">
-                        <img src="debit card.png"/>
+                {selectedPaymentMethod === 'debit' && (
+                <div className="debit-card-part">
+                    
+                    
+                    <div className="image-sec">
+                        <div className="debit-img">
+                            <img src="debit card.png"/>
+                        </div>
+                    </div>
+
+                    <div className="card-info">
+                        <div className="1">
+                        <p>Card Number</p>
+                        <input placeholder="1234 5678 1234 5678" />
+                        </div>
+                        <div className="2">
+                        <p>Card Holder Name</p>
+                        <input placeholder="JOHN DEPP" />
+                        </div>
+                        <div>
+                        <p>EXP Date</p>
+                        <input placeholder="mm / yyyy" />
+                        </div>
+                        <div>
+                        <p>CVV</p>
+                        <input placeholder="****" />
+                        </div>
+
+
+
                     </div>
                 </div>
-
-                <div className="card-info">
-                    <div className="1">
-                    <p>Card Number</p>
-                    <input placeholder="1234 5678 1234 5678" />
-                    </div>
-                    <div className="2">
-                    <p>Card Holder Name</p>
-                    <input placeholder="JOHN DEPP" />
-                    </div>
-                    <div>
-                    <p>EXP Date</p>
-                    <input placeholder="mm / yyyy" />
-                    </div>
-                    <div>
-                    <p>CVV</p>
-                    <input placeholder="****" />
+                )}
+                {selectedPaymentMethod === 'credit' && (
+                <div className="debit-card-part">
+                    
+                    
+                    <div className="image-sec">
+                        <div className="debit-img" id="credit-img">
+                            <img src="credit card.png"/>
+                        </div>
                     </div>
 
+                    <div className="card-info">
+                        <div className="1">
+                        <p>Card Number</p>
+                        <input placeholder="1234 5678 1234 5678" />
+                        </div>
+                        <div className="2">
+                        <p>Card Holder Name</p>
+                        <input placeholder="JOHN DEPP" />
+                        </div>
+                        <div>
+                        <p>EXP Date</p>
+                        <input placeholder="mm / yyyy" />
+                        </div>
+                        <div>
+                        <p>CVV</p>
+                        <input placeholder="****" />
+                        </div>
 
 
+
+                    </div>
                 </div>
+                )}
 
                 <div id="proceed-btn">
                     <button>Proceed</button>
