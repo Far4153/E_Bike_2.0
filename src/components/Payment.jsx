@@ -130,6 +130,51 @@ const Payment= () => {
                 </div>
                 )}
 
+
+                {selectedPaymentMethod === 'UPI' && (
+                <div className="UPI-part">
+                    
+                    
+                    <div className="upis">
+                        <div className="gpay">
+                            <div className="gpayimg">
+                            <img src="googlepay.png"/>
+                            </div>
+                            <h4>GOOGLE PAY</h4>
+                            <div className="gpaycheck">
+                                <img src={uncheckedImage}/>
+                            </div>
+                        </div>
+                        <div className="gpay">
+                        <div className="paytmimg">
+                            <img src="paytm.png"/>
+                        </div>
+                            
+                            <h4>PAY TM</h4>
+                            <div className="paytmcheck">
+                                <img src={uncheckedImage}/>
+                            </div>
+                        </div>
+                        <div className="gpay">
+                            <div className="phonepayimg">
+                                <img src="phonepay.png"/>
+                            </div>
+                            <h4>PHONE PAY</h4>
+                            <div className="phonepaycheck">
+                                <img src={uncheckedImage}/>
+                            </div>
+                        </div>
+                        <div className="gpay">
+                            <h3>Other UPI's</h3>
+                            <div className="otherupis" onClick={() => handlePaymentMethodClick("")}>
+                                <img src={selectedPaymentMethod === "gpay"? checkedImage : uncheckedImage}/>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+                )}
+
                 <div id="proceed-btn">
                     <button>Proceed</button>
                 </div>
