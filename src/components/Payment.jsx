@@ -19,9 +19,13 @@ const Payment= () => {
       const checkedImage = "/checkbox.png";
   
       const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
+      const [selectedUpiCheck, setSelectedUpiCheck] = useState(null);
 
       function handlePaymentMethodClick(method){
         setSelectedPaymentMethod(method)
+      };
+      function handleUpiCheck(method){
+        setSelectedUpiCheck(method)
       };
 
     return (
@@ -141,8 +145,8 @@ const Payment= () => {
                             <img src="googlepay.png"/>
                             </div>
                             <h4>GOOGLE PAY</h4>
-                            <div className="gpaycheck">
-                                <img src={uncheckedImage}/>
+                            <div className="gpaycheck" onClick={() => handleUpiCheck("gpaycheck")} >
+                                <img src={selectedUpiCheck === "gpaycheck"? checkedImage : uncheckedImage}/>
                             </div>
                         </div>
                         <div className="gpay">
@@ -151,8 +155,8 @@ const Payment= () => {
                         </div>
                             
                             <h4>PAY TM</h4>
-                            <div className="paytmcheck">
-                                <img src={uncheckedImage}/>
+                            <div className="paytmcheck" onClick={() => handleUpiCheck("paytmcheck")}>
+                                <img src={selectedUpiCheck === "paytmcheck"? checkedImage : uncheckedImage}/>
                             </div>
                         </div>
                         <div className="gpay">
@@ -160,14 +164,14 @@ const Payment= () => {
                                 <img src="phonepay.png"/>
                             </div>
                             <h4>PHONE PAY</h4>
-                            <div className="phonepaycheck">
-                                <img src={uncheckedImage}/>
+                            <div className="phonepaycheck" onClick={() => handleUpiCheck("phonepaycheck")} >
+                                <img src={selectedUpiCheck === "phonepaycheck"? checkedImage : uncheckedImage}/>
                             </div>
                         </div>
                         <div className="gpay">
                             <h3>Other UPI's</h3>
-                            <div className="otherupis" onClick={() => handlePaymentMethodClick("")}>
-                                <img src={selectedPaymentMethod === "gpay"? checkedImage : uncheckedImage}/>
+                            <div className="otherupischeck" onClick={() => handleUpiCheck("otherupischeck")}>
+                                <img src={selectedUpiCheck === "otherupischeck"? checkedImage : uncheckedImage}/>
                             </div>
                         </div>
                     </div>
@@ -176,7 +180,7 @@ const Payment= () => {
                 )}
 
                 <div id="proceed-btn">
-                    <button>Proceed</button>
+                    <Link to="/confirmation"><button>Proceed</button></Link>
                 </div>
                 
             
@@ -201,8 +205,7 @@ const Payment= () => {
                         </td>
                         <td>
                           <p>{product.price}</p>
-                        </td>
-
+                       </td>
                       </tr>
                       <tr>
                         <td colSpan="6"><hr /></td>
