@@ -191,7 +191,7 @@ const Payment= () => {
                 <div className="cart-cont">
                 <table>
                 <div style={{ display: 'flex' }} id="head">
-                <h3>Cart Summary</h3>
+                <h3>Cart Summarys</h3>
                 </div>
                 <tbody>
                     {cart.map((product) => (
