@@ -2,19 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "../styles/confirmation.css"
 
-function Confirmation() {
+function EmptyCart() {
     return(
         <div className='confirmation-page'>
-            <div className='confirm-img'>
-                <img src='orderconfirm.png' alt='confirm image' />
+            <div className='emptycart-img'>
+                <img src='emptycart.png' alt='confirm image' />
             </div>
             <div id='confirm-head'>
-                Order Confirmed!
+                Hey, it looks empty !!!
             </div>
             <div id='order-confirm-text'>
-                Your order has been placed successfully<span> Order History</span>
-                <p>Get the delivery by 20th dec - 30th dec</p>
-                <span>Track My Order</span>
+            Let’s add something to make
+                <p>your cart Heavy </p>
+                {/* <span>Track My Order</span> */}
             </div>
 
             <div id='confirm-continue-button'>
@@ -24,4 +24,4 @@ function Confirmation() {
     )
 }
 
-export default Confirmation
+export default EmptyCart

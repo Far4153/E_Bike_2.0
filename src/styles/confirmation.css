@@ -54,3 +54,8 @@
 #confirm-continue-button button{
     font-weight: bold;
 }
+
+.emptycart-img img{
+width: 400px;
+height: 300px;
+}

@@ -12,6 +12,7 @@ import Checkout from "./Checkout.jsx";
 import { CartProvider } from './CartContext';
 import Payment from "./Payment.jsx"
 import Confirmation from "./Confirmation.jsx";
+import EmptyCart from "./EmptyCart.jsx";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Checkout" element={<Checkout />} />
           <Route path="/Payment" element={<Payment />} />
           <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/EmptyCart" element={<EmptyCart />} />
         </Routes>
       </Router>
     </CartProvider>

@@ -17,6 +17,8 @@ const Cart = () => {
     console.log(cartSize);
     const [isHovered, setisHovered]=useState(false);
 
+    
+
     const calculateSubtotal = () => {
     return cart.reduce((total, product) => total + parseInt(product.price.replace(/\D/g, ''), 10),0);
   };

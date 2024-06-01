@@ -44,7 +44,7 @@ function Navbar({ showCSection,showCartSection,size }) {
         </Link>
         {showCartSection && (
           <Link
-            to="/Cart"
+            to={size === 0 ? "/EmptyCart" : "/Cart"}
             className={`cartsec ${open ? 'active' : 'inactive'}`}
           >
             <p>Cart</p>

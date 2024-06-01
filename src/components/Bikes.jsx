@@ -60,7 +60,7 @@ function Bikes(){
                     <h1>Bikes</h1>
                     
                     <div className="left-sec">
-                    <ul><Link to="/Cart" className="bikescart"><ShoppingCart color="#ffffff" size={35}/>
+                    <ul><Link to={cartSize === 0 ? "/EmptyCart" : "/Cart"} className="bikescart"><ShoppingCart color="#ffffff" size={35}/>
                     <span>{cartSize}</span></Link></ul>
                     <div className="Search-bar">
                     <div className="search-icon"><Search color="#000000" /></div>
