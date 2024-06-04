@@ -4,6 +4,8 @@ import { ShoppingCart } from "lucide-react";
 import { ShoppingBag } from "lucide-react";
 import { LogIn } from "lucide-react";
 import { Link } from 'react-router-dom';
+import { useCart } from './CartContext';
+
 
 
 
@@ -12,8 +14,11 @@ import { Link } from 'react-router-dom';
 function Navbar({ showCSection,showCartSection,size }) {
 
   const [open , setOpen]= useState(false);
-  
 
+  const { cart } = useCart();
+  
+  const cartSize = cart.length;
+  console.log(cartSize);
    
 
     return (
@@ -44,11 +49,11 @@ function Navbar({ showCSection,showCartSection,size }) {
         </Link>
         {showCartSection && (
           <Link
-            to={size === 0 ? "/EmptyCart" : "/Cart"}
+            to={cartSize === 0 ? "/EmptyCart" : "/Cart"}
             className={`cartsec ${open ? 'active' : 'inactive'}`}
           >
             <p>Cart</p>
-            <span>{size}</span>
+            <span>{cartSize > 0 ? cartSize : ""}</span>
           </Link>
         )}
         
