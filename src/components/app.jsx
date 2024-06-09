@@ -13,6 +13,7 @@ import { CartProvider } from './CartContext';
 import Payment from "./Payment.jsx"
 import Confirmation from "./Confirmation.jsx";
 import EmptyCart from "./EmptyCart.jsx";
+import Services_and_Support from "./Services_and_Support.jsx"
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/Bikes" element={<Bikes />} />
           <Route path="/About_Us" element={<AboutUs />} />
+          <Route path="/Services_and_Support" element={<Services_and_Support />} />
           <Route path="/Product_page/:ProductId" element={<Product_page />} />
 
           <Route path="/Cart" element={<Cart />} />
