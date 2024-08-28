@@ -17,7 +17,7 @@ const Checkout = () => {
 
     return (
         <div className="checkout-page">
-        <Navbar style={{backgroundColor: "#8e2841"}}/>
+        <Navbar />
         <div className="checkout-body">
             <div className="checkout-sec">
                 <h1>Checkout</h1>

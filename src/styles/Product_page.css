@@ -96,8 +96,6 @@
     font-size: large;
 }
 
-
-
 .text-grid button{
     background-color: #FF3465;
     color: white; /* Text color */
@@ -107,6 +105,13 @@
     margin-right: 50px; /* Margin between buttons */
     margin-top: 30px; /* Margin between buttons */
     cursor: pointer;
+    
+    }
+    
+    
+    .text-grid button:hover      {
+    background-color: #8e2841;
+
 }
 
 .product-page-bottom{

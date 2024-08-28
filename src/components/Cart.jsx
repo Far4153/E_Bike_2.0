@@ -22,6 +22,11 @@ const Cart = () => {
     const calculateSubtotal = () => {
     return cart.reduce((total, product) => total + parseInt(product.price.replace(/\D/g, ''), 10),0);
   };
+  let numofproduct=0;
+
+    function increase(){
+      numofproduct=+1;
+    }
   
     return (
       <div className="cart-page">
@@ -61,7 +66,7 @@ const Cart = () => {
                           <p>{product.price}</p>
                         </td>
                         <td>
-                          <p><button>+</button></p>
+                          <p><button onClick={increase}>numofproduct</button><button>+</button></p>
                         </td>
                         <td>
                           <p>{product.price}</p>
