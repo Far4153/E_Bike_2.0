@@ -17,16 +17,39 @@ const Cart = () => {
     console.log(cartSize);
     const [isHovered, setisHovered]=useState(false);
 
-    
-
+    // Initialize state for quantities of each product
+    const [quantities, setQuantities] = useState(
+      cart.reduce((acc, product) => {
+        acc[product.id] = 1; // Default quantity of 1 for each product
+        return acc;
+      }, {})
+    );
+  
+    // Function to calculate subtotal
     const calculateSubtotal = () => {
-    return cart.reduce((total, product) => total + parseInt(product.price.replace(/\D/g, ''), 10),0);
-  };
-  let numofproduct=0;
-
-    function increase(){
-      numofproduct=+1;
-    }
+      return cart.reduce(
+        (total, product) =>
+          total +
+          parseInt(product.price.replace(/\D/g, ''), 10) * quantities[product.id],
+        0
+      );
+    };
+  
+    // Increase quantity of a specific product
+    const increaseQuantity = (productId) => {
+      setQuantities((prevQuantities) => ({
+        ...prevQuantities,
+        [productId]: prevQuantities[productId] + 1,
+      }));
+    };
+  
+    // Decrease quantity of a specific product
+    const decreaseQuantity = (productId) => {
+      setQuantities((prevQuantities) => ({
+        ...prevQuantities,
+        [productId]: prevQuantities[productId] > 1 ? prevQuantities[productId] - 1 : 1,
+      }));
+    };
   
     return (
       <div className="cart-page">
@@ -66,13 +89,13 @@ const Cart = () => {
                           <p>{product.price}</p>
                         </td>
                         <td>
-                          <p><button onClick={increase}>numofproduct</button><button>+</button></p>
+                          <p><button>{quantities[product.id]}</button><button onClick={()=>increaseQuantity(product.id)}>+</button></p>
                         </td>
                         <td>
-                          <p>{product.price}</p>
+                          <p>{(parseInt(product.price.replace(/\D/g, ''), 10)) * (quantities[product.id])}</p>
                         </td>
                         <td>
-                          <p><button>-</button></p>
+                          <p><button onClick={()=>decreaseQuantity(product.id)}>-</button></p>
                         </td>
                       </tr>
                       <tr>
