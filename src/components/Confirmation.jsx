@@ -1,8 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../styles/confirmation.css"
+import { useCart } from './CartContext';
+import "../styles/confirmation.css";
 
 function Confirmation() {
+    const { cart, clearCart} = useCart();
+    
+    function emptyCart(){
+        clearCart();
+    }
     return(
         <div className='confirmation-page'>
             <div className='confirm-img'>
@@ -18,7 +24,7 @@ function Confirmation() {
             </div>
 
             <div id='confirm-continue-button'>
-                <Link to="/bikes"><button >Continue Shopping</button></Link>
+                <Link to="/bikes"><button onClick={emptyCart}>Continue Shopping</button></Link>
             </div>
         </div>
     )

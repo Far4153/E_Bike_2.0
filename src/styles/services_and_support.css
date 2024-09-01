@@ -33,7 +33,7 @@ body{
     height: 100%;
     /* border: 1px solid white; */
     margin-left: 20%;
-    box-shadow: 0px 4px 80px 10px rgb(181, 181, 181);
+    box-shadow: 0px 1px 20px 10px rgb(181, 181, 181);
     border-radius: 20px;
 }
 #services_and_support_sub #card-2{
@@ -44,7 +44,7 @@ body{
  
     margin-left: 5%;
 
-    box-shadow: 0px 4px 80px 10px rgb(181, 181, 181);
+    box-shadow: 0px 1px 20px 10px rgb(181, 181, 181);
     border-radius: 20px;
     
 }
@@ -56,13 +56,13 @@ body{
     height: 100%;
     /* border: 1px solid white; */
     margin-left: 30%;
-    box-shadow: 0px 4px 80px 10px rgb(181, 181, 181);
+    box-shadow: 0px 1px 20px 10px rgb(181, 181, 181);
     border-radius: 20px;
     
 }
 
 #services_and_support_sub  #card-4{
-    box-shadow: 0px 4px 80px 10px rgb(181, 181, 181);
+    box-shadow: 0px 1px 20px 10px rgb(181, 181, 181);
     width: 50%;
     height: 100%;
     /* border: 1px solid white; */

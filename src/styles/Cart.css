@@ -184,7 +184,9 @@ padding: 0px;
   border-radius: 0px;
    /* Set width of cards */
 }
-
+.similar-bikes a{
+  text-decoration: none;
+}
 .like-sec{
   background-color: #1e1e1e;
 }

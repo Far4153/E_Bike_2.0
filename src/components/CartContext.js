@@ -16,8 +16,10 @@ export const CartProvider = ({ children }) => {
   const cartSize = cart.length;
   console.log(cartSize);
 
+  const clearCart = ()=> setCart([]);
+
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, clearCart}}>
       {children}
     </CartContext.Provider>
   );
