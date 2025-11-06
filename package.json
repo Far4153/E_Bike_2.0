@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Far4153.github.io/E_Bike_2.0",
   "name": "e-bike-website",
   "version": "0.1.0",
   "private": true,
@@ -13,17 +14,17 @@
     "react-dom": "^18.2.0",
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.22.1",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "redux": "^5.0.1",
     "web-vitals": "^2.1.4"
-    
-    
   },
   "scripts": {
-"start": "start http://localhost:3000 && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +43,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "gh-pages": "^6.3.0"
   }
 }

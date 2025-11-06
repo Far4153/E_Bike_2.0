@@ -18,7 +18,7 @@ import Services_and_Support from "./Services_and_Support.jsx"
 function App() {
   return (
     <CartProvider>
-      <Router>
+      <Router basename="/E_Bike_2.0">
         <Routes>
           <Route exact path="/" element={<Mainbody />} />
           <Route path="/LogIn" element={<LogIn />} />
