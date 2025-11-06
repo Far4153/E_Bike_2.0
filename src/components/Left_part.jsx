@@ -1,4 +1,5 @@
 import React from "react";
+import bicycle2 from "../images/bicycle2.png";
 
 function Left_part(){
     return(
@@ -15,7 +16,7 @@ function Left_part(){
 
         <div className="bottom-sec">
             <div className="small-bike" >
-                <img src="bicycle2.png" />
+                <img src={bicycle2} />
             </div>
 
             <div className="sponsers">
