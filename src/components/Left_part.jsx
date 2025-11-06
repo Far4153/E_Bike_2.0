@@ -15,7 +15,7 @@ function Left_part(){
 
         <div className="bottom-sec">
             <div className="small-bike" >
-                <img src="/bicycle2.png" />
+                <img src="bicycle2.png" />
             </div>
 
             <div className="sponsers">
