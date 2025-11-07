@@ -5,7 +5,7 @@ function Right_part(){
     <div className="right-column">
         <div className="container-1" >
             <div className="bigbike">
-                <img src={`${process.env.PUBLIC_URL}bicycle.png`}/>
+                <img src={`${process.env.PUBLIC_URL}/bicycle.png`}/>
             </div>
             <div className="rectangle">
                 <div className="ratings">
