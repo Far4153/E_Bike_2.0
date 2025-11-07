@@ -15,9 +15,9 @@ const Payment= () => {
         return cart.reduce((total, product) => total + parseInt(product.price.replace(/\D/g, ''), 10),0);
       };
 
-      const uncheckedImage = "/uncheckbox.png";
-      const checkedImage = "/checkbox.png";
-  
+        const uncheckedImage = `${process.env.PUBLIC_URL}/uncheckbox.png`;
+        const checkedImage = `${process.env.PUBLIC_URL}/checkbox.png`;
+        
       const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
       const [selectedUpiCheck, setSelectedUpiCheck] = useState(null);
 
