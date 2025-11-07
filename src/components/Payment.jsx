@@ -17,7 +17,8 @@ const Payment= () => {
 
         const uncheckedImage = `${process.env.PUBLIC_URL}/uncheckbox.png`;
         const checkedImage = `${process.env.PUBLIC_URL}/checkbox.png`;
-        
+  
+
       const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
       const [selectedUpiCheck, setSelectedUpiCheck] = useState(null);
 
