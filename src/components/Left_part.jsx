@@ -20,9 +20,9 @@ function Left_part(){
             </div>
 
             <div className="sponsers">
-                <img id="one" src="t2.png" />
-                <img id="two" src="t3.png" />
-                <img id="three" src="t4.png" />
+                <img id="one" src={`${process.env.PUBLIC_URL}t2.png`} />
+                <img id="two" src={`${process.env.PUBLIC_URL}t3.png`} />
+                <img id="three" src={`${process.env.PUBLIC_URL}t4.png`} />
                 
             </div>
         </div>

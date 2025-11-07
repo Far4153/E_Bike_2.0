@@ -42,14 +42,14 @@ function Bikes(){
             <div className="filters-sec">
                 <div className="filters-sub">
                 <div className="filters-heading">
-                <h1><img src="/filterslines.png" />Filters</h1></div>
+                <h1><img src={`${process.env.PUBLIC_URL}/filterslines.png`} />Filters</h1></div>
 
                     <ul>
-                        <li> <img src="/dropper.png" /><span>Price</span></li><div id="hr"></div>
-                        <li><img src="/dropper.png" /><span>Brands</span></li><div id="hr"></div>
-                        <li><img src="/dropper.png" /><span>Latest</span></li><div id="hr"></div>
-                        <li><img src="/dropper.png" /><span>Speed</span></li><div id="hr"></div>
-                        <li><img src="/dropper.png" /><span>Type</span></li><div id="hr"></div>
+                        <li> <img src={`${process.env.PUBLIC_URL}/dropper.png`} /><span>Price</span></li><div id="hr"></div>
+                        <li><img src={`${process.env.PUBLIC_URL}/dropper.png`} /><span>Brands</span></li><div id="hr"></div>
+                        <li><img src={`${process.env.PUBLIC_URL}/dropper.png`} /><span>Latest</span></li><div id="hr"></div>
+                        <li><img src={`${process.env.PUBLIC_URL}/dropper.png`} /><span>Speed</span></li><div id="hr"></div>
+                        <li><img src={`${process.env.PUBLIC_URL}/dropper.png`} /><span>Type</span></li><div id="hr"></div>
                     </ul>
 
                 </div>

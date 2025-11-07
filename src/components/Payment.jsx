@@ -36,15 +36,15 @@ const Payment= () => {
                 <h2>Payment</h2>
                 <div className="stages">                            
                     <div>
-                        <img src="/billing img.png"></img>
+                        <img src={`${process.env.PUBLIC_URL}/billing img.png`}></img>
                     </div>
                     <hr></hr>
                     <div>
-                        <img src="/payment active2.png"></img>
+                        <img src={`${process.env.PUBLIC_URL}/payment active2.png`}></img>
                     </div>
                     <hr></hr>
                     <div>
-                        <img src="/confirm img.png"></img>
+                        <img src={`${process.env.PUBLIC_URL}/confirm img.png`}></img>
                     </div>
                 
                 </div>
@@ -73,7 +73,7 @@ const Payment= () => {
                     
                     <div className="image-sec">
                         <div className="debit-img">
-                            <img src="debit card.png"/>
+                            <img src={`${process.env.PUBLIC_URL}debit card.png`}/>
                         </div>
                     </div>
 
@@ -106,7 +106,7 @@ const Payment= () => {
                     
                     <div className="image-sec">
                         <div className="debit-img" id="credit-img">
-                            <img src="credit card.png"/>
+                            <img src={`${process.env.PUBLIC_URL}credit card.png`}/>
                         </div>
                     </div>
 
@@ -142,7 +142,7 @@ const Payment= () => {
                     <div className="upis">
                         <div className="gpay">
                             <div className="gpayimg">
-                            <img src="googlepay.png"/>
+                            <img src={`${process.env.PUBLIC_URL}googlepay.png`}/>
                             </div>
                             <h4>GOOGLE PAY</h4>
                             <div className="gpaycheck" onClick={() => handleUpiCheck("gpaycheck")} >
@@ -151,7 +151,7 @@ const Payment= () => {
                         </div>
                         <div className="gpay">
                         <div className="paytmimg">
-                            <img src="paytm.png"/>
+                            <img src={`${process.env.PUBLIC_URL}paytm.png`}/>
                         </div>
                             
                             <h4>PAY TM</h4>
@@ -161,7 +161,7 @@ const Payment= () => {
                         </div>
                         <div className="gpay">
                             <div className="phonepayimg">
-                                <img src="phonepay.png"/>
+                                <img src={`${process.env.PUBLIC_URL}phonepay.png`}/>
                             </div>
                             <h4>PHONE PAY</h4>
                             <div className="phonepaycheck" onClick={() => handleUpiCheck("phonepaycheck")} >

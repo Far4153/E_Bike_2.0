@@ -6,7 +6,7 @@ function EmptyCart() {
     return(
         <div className='confirmation-page'>
             <div className='emptycart-img'>
-                <img src='emptycart.png' alt='confirm image' />
+                <img src={`${process.env.PUBLIC_URL}emptycart.png`} alt='confirm image' />
             </div>
             <div id='confirm-head'>
                 Hey, it looks empty !!!

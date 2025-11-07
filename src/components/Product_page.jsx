@@ -49,13 +49,13 @@ function Product_page(){
                         </div>
                         <div className="sub-images">
                             <div>
-                                <img src="/sub1.png"></img>
+                                <img src={`${process.env.PUBLIC_URL}/sub1.png`}></img>
                             </div>
                             <div>
-                                <img src="/sub2.png"></img>
+                                <img src={`${process.env.PUBLIC_URL}/sub2.png`}></img>
                             </div>
                             <div>
-                                <img src="/sub3.png"></img>
+                                <img src={`${process.env.PUBLIC_URL}/sub3.png`}></img>
                             </div>
 
                         </div>
@@ -64,12 +64,12 @@ function Product_page(){
                     <ul><Link to="/Cart" className="bikescart" onMouseEnter={()=>setisHovered(true)} onMouseLeave={()=>setisHovered(false)}><ShoppingCart  style={{ color: isHovered?"#FF3465" :"#ffffff" }}  size={35}/>
                     <span>{cartSize}</span></Link></ul>
                         <h3>{product.name}</h3>
-                        <img src="/rating.png" />
+                        <img src={`${process.env.PUBLIC_URL}/rating.png`} />
                         <p id="price">{product.price}</p>
                        
                         <div className="colors">
                             <p>Available colors</p>
-                            <img src="/colors.png" />
+                            <img src={`${process.env.PUBLIC_URL}/colors.png`} />
                         </div>
                         <br />
                         <p id="left">only 1 left - make it yours</p>

@@ -23,15 +23,15 @@ const Checkout = () => {
                 <h1>Checkout</h1>
                 <div className="stages">                            
                     <div>
-                        <img src="/billing img.png"></img>
+                        <img src={`${process.env.PUBLIC_URL}/billing img.png`}></img>
                     </div>
                     <hr></hr>
                     <div>
-                        <img src="/payment img.png"></img>
+                        <img src={`${process.env.PUBLIC_URL}/payment img.png`}></img>
                     </div>
                     <hr></hr>
                     <div>
-                        <img src="/confirm img.png"></img>
+                        <img src={`${process.env.PUBLIC_URL}/confirm img.png`}></img>
                     </div>
                 
                 </div>
