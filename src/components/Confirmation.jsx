@@ -12,7 +12,7 @@ function Confirmation() {
     return(
         <div className='confirmation-page'>
             <div className='confirm-img'>
-                <img src={`${process.env.PUBLIC_URL}orderconfirm.png`} alt='confirm image' />
+                <img src={`${process.env.PUBLIC_URL}/orderconfirm.png`} alt='confirm image' />
             </div>
             <div id='confirm-head'>
                 Order Confirmed!

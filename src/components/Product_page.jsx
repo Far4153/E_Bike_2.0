@@ -44,7 +44,7 @@ function Product_page(){
                 <div className="product-page-top">
                     <div className="image-grid">
                         <div className="main-img">
-                            <img src={`${process.env.PUBLIC_URL}/${product.image}`}></img>
+                            <img src={product.image}></img>
                             
                         </div>
                         <div className="sub-images">
