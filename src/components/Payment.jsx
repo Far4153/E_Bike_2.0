@@ -36,15 +36,15 @@ const Payment= () => {
                 <h2>Payment</h2>
                 <div className="stages">                            
                     <div>
-                        <img src={`${process.env.PUBLIC_URL}/billing img.png`}></img>
+                        <img src={`${process.env.PUBLIC_URL}/billing_img.png`}></img>
                     </div>
                     <hr></hr>
                     <div>
-                        <img src={`${process.env.PUBLIC_URL}/payment active2.png`}></img>
+                        <img src={`${process.env.PUBLIC_URL}/payment_active2.png`}></img>
                     </div>
                     <hr></hr>
                     <div>
-                        <img src={`${process.env.PUBLIC_URL}/confirm img.png`}></img>
+                        <img src={`${process.env.PUBLIC_URL}/confirm_img.png`}></img>
                     </div>
                 
                 </div>
@@ -73,7 +73,7 @@ const Payment= () => {
                     
                     <div className="image-sec">
                         <div className="debit-img">
-                            <img src={`${process.env.PUBLIC_URL}debit card.png`}/>
+                            <img src={`${process.env.PUBLIC_URL}debit_card.png`}/>
                         </div>
                     </div>
 
@@ -106,7 +106,7 @@ const Payment= () => {
                     
                     <div className="image-sec">
                         <div className="debit-img" id="credit-img">
-                            <img src={`${process.env.PUBLIC_URL}credit card.png`}/>
+                            <img src={`${process.env.PUBLIC_URL}credit_card.png`}/>
                         </div>
                     </div>
 
