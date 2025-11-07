@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/E_Bike_2.0/static/css/main.c2534efa.css",
-    "main.js": "/E_Bike_2.0/static/js/main.1d63d49a.js",
+    "main.js": "/E_Bike_2.0/static/js/main.02ed9592.js",
     "static/media/signupbg.png": "/E_Bike_2.0/static/media/signupbg.245f62ce194d6293d3b8.png",
     "static/media/roadbg.png": "/E_Bike_2.0/static/media/roadbg.59c5f89fd5b2fb868777.png",
     "static/media/loginbg.png": "/E_Bike_2.0/static/media/loginbg.a98c8b7f44820bb705fc.png",
     "index.html": "/E_Bike_2.0/index.html",
     "main.c2534efa.css.map": "/E_Bike_2.0/static/css/main.c2534efa.css.map",
-    "main.1d63d49a.js.map": "/E_Bike_2.0/static/js/main.1d63d49a.js.map"
+    "main.02ed9592.js.map": "/E_Bike_2.0/static/js/main.02ed9592.js.map"
   },
   "entrypoints": [
     "static/css/main.c2534efa.css",
-    "static/js/main.1d63d49a.js"
+    "static/js/main.02ed9592.js"
   ]
 }
