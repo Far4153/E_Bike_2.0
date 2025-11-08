@@ -17,6 +17,23 @@ body, html{
 }
 
 
+/* Tab view */
+@media screen and (max-width: 768px) {
+  .main{
+   display: block;
+  }
+}   
+
+/*  Mobile (smart phone) */
+@media screen and (max-width: 420px) {
+  .main{
+    display: flex;
+    flex-direction: column;
+  }
+}   
+
+
+
 .navbar {
     position: absolute;
     top: 0;
