@@ -22,6 +22,14 @@ body, html{
   .main{
    display: block;
   }
+
+  .left-column{
+    display: none;
+  }
+
+    .right-column{
+    display: none;
+  }
 }   
 
 /*  Mobile (smart phone) */
@@ -29,6 +37,14 @@ body, html{
   .main{
     display: flex;
     flex-direction: column;
+  }
+  
+  .left-column{
+    display: none;
+  }
+
+    .right-column{
+    display: none;
   }
 }   
 
