@@ -1,4 +1,5 @@
 import React from "react";
+
 // import bicycle2 from "../images/bicycle2.png";
 
 function Left_part(){

@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/style.css";
 
 function Right_part(){
     return(
@@ -28,16 +29,31 @@ function Right_part(){
                     </clipPath>
                     </defs>
                     </svg>
-                    <p style={{ position: "absolute", right: "95px", top: "240px", transform: "translateX(-50%)" , fontSize: "12px", fontWeight:"bold" }}>1000+ reviews</p>
+                    <p>1000+ reviews</p>
 
                 </div>
         </div>
         </div>
         <div className="container-2">
-            <h1>25 km/h <p>Assist  Speed</p></h1>
-            <h1>70 km <p>Battery Range</p></h1>
-            <h1>3.5  h <p>Chargeing Time</p></h1>
-            <h1>16.9 kg <p>Weight</p></h1>
+            <div className="stat">
+            <h1>25 km/h</h1>
+            <p>Assist Speed</p>
+            </div>
+
+            <div className="stat">
+            <h1>70 km</h1>
+            <p>Battery Range</p>
+            </div>
+
+            <div className="stat">
+            <h1>3.5 h</h1>
+            <p>Charging Time</p>
+            </div>
+
+            <div className="stat">
+            <h1>16.9 kg</h1>
+            <p>Weight</p>
+            </div>
 
         </div>
     </div>

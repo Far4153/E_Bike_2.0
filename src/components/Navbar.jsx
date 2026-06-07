@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "../styles/style.css";
 import DropdownItem from "./DropdownItem";
 import { ShoppingCart } from "lucide-react";
 import { ShoppingBag } from "lucide-react";

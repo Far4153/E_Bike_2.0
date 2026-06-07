@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import Navbar from "./Navbar";
 import Right_part from "./Right_part";
 import Left_part from "./Left_part";
+import "../styles/style.css";
 
 
 function Mainbody(){
