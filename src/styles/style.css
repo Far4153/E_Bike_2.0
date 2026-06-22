@@ -404,3 +404,63 @@ body, html{
     font-size:12px;
     color:#ccc;
 } 
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .c-sec {
+    position: static;
+    transform: none;
+  }
+
+  .trigger {
+    margin: 0;
+  }
+
+  .r-sec {
+    margin-right: 0;
+  }
+    .hero-sec {
+    max-width: 90%;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero-sec h1 {
+    font-size: 2.2rem;
+  }
+
+   .bottom-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sponsers {
+    margin: 20px 0;
+  }
+    .bigbike img {
+    max-width: 90%;
+  }
+
+    .container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+    .left-column::before {
+    width: 300px;
+    height: 300px;
+    left: -100px;
+    bottom: -100px;
+  }
+
+}
