@@ -63,7 +63,8 @@ const Cart = () => {
 
         <div className='cart-grid'>
           <div className='summary-sec'>
-              <div className='items'>
+              <div className="items-wrapper">
+                <div className="items">
                 <table>
                   <thead>
                     <tr>
@@ -109,6 +110,8 @@ const Cart = () => {
                 </table>
                 
               </div>
+              </div>
+
               <div className='order'>
                 <div className='order-box'>
                   <div className='for-margin'>

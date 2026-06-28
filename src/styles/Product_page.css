@@ -53,6 +53,7 @@
     width: 100%; /* or any specific width you want */
     max-width: 100%;
     height: 100%;
+    border-radius:10px;
      /* Ensure images don't exceed their container width */
 }
 
@@ -159,8 +160,9 @@
 }
 
 .main-img img{
-    width: 100%;
-    height:340px;
+    width:100%;
+    height:auto;
+    object-fit:contain;
 }
 
 .review{
@@ -180,8 +182,9 @@
 
 #profile{
     border-radius: 50%;
-    width: 5%;
-    height: 5%;
+        width:60px;
+    height:60px;
+    
     
 }
 
@@ -206,16 +209,71 @@
 
 
 
-.reviewtab h3{
-margin-left: 45%;
-}
-
+..reviewtab h3,
 .descriptiontab h3{
-margin-left: 45%;
+
+text-align:center;
+margin-left:0;
+
 }
 
 .product-whole .navbar{
     position: static;
     background-color: #8e2841;
     
+}
+
+@media (max-width:768px){
+
+.product-page-top{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.text-grid ul{
+
+    position:static;
+    display:flex;
+    justify-content:flex-end;
+
+}
+.text-grid{
+
+    margin:20px;
+    text-align:center;
+
+}
+.text-grid button{
+
+    width:100%;
+    margin:10px 0;
+
+}
+
+#desc{
+
+    margin-left:0;
+
+}
+
+#reviews{
+
+    margin-right:0;
+
+}
+
+.additional{
+
+    justify-content:space-evenly;
+
+}
+.descriptiontab,
+.reviewtab{
+
+    padding:20px;
+
+}
+
 }

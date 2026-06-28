@@ -159,7 +159,9 @@
     padding: 0;
     border-radius: 20px;
     margin: 0;
-    width: 175px;
+    width:100%;
+    max-width:180px;
+    height:auto;
     height: 115px;
 }
 
@@ -168,7 +170,8 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    width: 220px;
+    width:100%;
+    max-width:260px;
     border-radius: 20px;
     height: 300px;
     border: 1px ridge rgb(255, 255, 255);
@@ -272,3 +275,60 @@
 
 
   }
+
+
+@media (max-width:768px){
+
+    .filters-sec{
+        display:none;
+    }
+
+    .bikes-sec{
+        margin-left:0;
+    }
+        .bikes-content{
+        grid-template-columns:1fr;
+        justify-items:center;
+        margin:20px;
+        gap:25px;
+    }
+    .bikes-Nav{
+
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.bikes-Nav h1{
+
+    margin:20px 0;
+
+}
+
+.left-sec{
+
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.Search-bar{
+
+    width:90%;
+    padding:20px;
+
+}
+
+.Search-bar input{
+
+    width:100%;
+
+}
+.bikes-sec{
+
+    margin-left:0;
+
+}
+
+}

@@ -158,23 +158,23 @@ padding: 0px;
   font-weight: bold;
 }
 
-.like-sec {
-  overflow-x: auto;
-  /* margin-left: 30px; */
-   /* Enable horizontal scrolling */
+
+.like-sec{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 .like-sec h3{
-  /* overflow-x: auto; */
+
   margin-left: 30px;
-   /* Enable horizontal scrolling */
+
 }
 
 .similar-bikes {
   display: grid; /* Use CSS Grid to arrange cards */
   grid-auto-flow: column; /* Arrange items in a single row */
   gap: 70px; /* Add gap between cards */
-  margin-left: 30px;
-  margin-bottom: 30px;
+
 
 }
 
@@ -212,5 +212,93 @@ padding: 0px;
   margin-right: 0px; /* Margin between buttons */
   margin-top: 5px; /* Margin between buttons */
   cursor: pointer;
+
+}
+.items-wrapper{
+
+    overflow-x:auto;
+
+}
+
+table{
+
+    min-width:700px;
+    border-collapse:collapse;
+
+}
+
+.summary-sec > *{
+    min-width:0;
+}
+
+.items-wrapper{
+    min-width:0;
+    overflow-x:auto;
+}
+@media (max-width:768px){
+
+.summary-sec{
+
+    grid-template-columns:1fr;
+    gap:20px;
+
+}
+
+.order{
+
+    justify-content:center;
+
+}
+
+
+.items{
+
+    margin:15px;
+
+}
+
+.order-box{
+
+    width:90%;
+
+}
+.coupon{
+
+    display:flex;
+
+}
+
+.coupon input{
+
+    flex:1;
+
+}
+
+.similar-bikes{
+
+gap:20px;
+margin-left:15px;
+
+}
+
+.sub-nav{
+
+align-items:center;
+
+}
+
+.sub-nav ul{
+
+position:static;
+
+}
+th,
+td{
+
+padding:8px;
+font-size:14px;
+
+}
+
 
 }
