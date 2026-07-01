@@ -1,6 +1,12 @@
 import React from "react";
 import Navbar from "./Navbar";
 import "../styles/services_and_support.css";
+import {
+  Headset,
+  ShieldCheck,
+  Wrench,
+  Hammer
+} from "lucide-react";
 
 function Services_and_Support(){
     return (
@@ -13,12 +19,14 @@ function Services_and_Support(){
             </div>
             <div id="services_and_support_sub">
                 <div className="row-1">
-                    <div id="card-1">   
+                    <div id="card-1">  
+                        <Headset size={30} color="#FF3465" /> 
                         <h3>Customer Support</h3>
                         <p>Contact Information: Phone number, email address, and live chat options.
 Operating Hours: Hours of availability for customer support</p>
                     </div>
                     <div id="card-2">
+                            <ShieldCheck size={30} color="#FF3465" />
                         <h3>Warranty Information</h3>
                         <p>
                         Warranty Coverage: Details on what is covered under the warranty, including the duration and specific parts (e.g., battery, motor, frame).
@@ -28,12 +36,16 @@ Warranty Claims: Instructions on how to make a warranty claim, including necessa
                 </div>
                 <div className="row-2">
                     <div id="card-3">
+                            <Wrench size={30} color="#FF3465" />
+
                         <h3>Maintenance Services</h3>
                         <p>Regular Maintenance: Information on scheduled maintenance services, including tuning, brake adjustments, and tire checks.
 Battery Care: Tips and services related to battery maintenance, charging, and replacement.
 Motor Maintenance: Services offered for motor upkeep and troubleshooting.</p>
                     </div>
                     <div id="card-4">
+                            <Hammer size={30} color="#FF3465" />
+
                         <h3>Repair Services</h3>
                         <p>In-House Repairs: Description of repair services available at the company’s service centers, such as fixing electrical issues, replacing parts, and general repairs.
 Mobile Repair Services: Information on mobile repair options where technicians come to the customer’s location.</p>

@@ -1,45 +1,156 @@
 body{
-    padding: 0%;
-    margin: 0%; 
-    width: 100%;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     background-image: url(../../public/roadbg.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
 }
-.about-us-page{
-    padding: 0%;
-    margin: 0%;
-}
+
 
 .about-us-page .navbar{
     background: #8E2841;
-    margin: 0%;
 }
+
+/* Heading */
+
+.about-us-page{
+    width:100%;
+    padding-top:40px;
+    box-sizing:border-box;
+}
+
 
 #aboutus_heading{
-    margin-top: 50px;
-    margin-left: 10px;
+    text-align:center;
+    padding-top:40px;
+    margin: 50px 0 30px;
 }
 
+#aboutus_heading h1{
+    font-size: 42px;
+}
+
+/* Main Content */
+
 #aboutus_sub_heading{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 100px;
+
+    width: 85%;
+    max-width: 900px;
+
+    margin: 0 auto 60px;
+
+    background: rgba(0,0,0,.75);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,.18),
+        0 0 25px rgba(255,255,255,.08);
+
+}
+
+#aboutus_sub_heading h2{
+
+    font-size: 34px;
+    margin-bottom: 20px;
+
+}
+
+#aboutus_sub_heading p{
+
+    line-height: 1.8;
+    font-size: 18px;
+    color: #d7d7d7;
+
+}
+
+/* Button */
+
+#aboutus_button{
+
+    margin-top: 30px;
+
 }
 
 #aboutus_button button{
 
-    background-color: #8E2841;
-    color: white; /* Text color */
-    padding: 10px 10px; /* Padding */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    margin-right: 0px; /* Margin between buttons */
-    margin-top: 5px; /* Margin between buttons */
-    cursor: pointer;
-    margin-bottom: 10px;
-     
+    background:#8E2841;
+    color:white;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
 }
 
+#aboutus_button button:hover{
 
+    background:#FF3465;
+    transform:translateY(-2px);
+
+}
+
+@media (max-width:768px){
+
+#aboutus_heading{
+
+    margin:35px 15px 25px;
+
+}
+
+#aboutus_heading h1{
+
+    font-size:34px;
+
+}
+
+#aboutus_sub_heading{
+
+    width:92%;
+
+    padding:25px;
+
+    margin-bottom:40px;
+
+}
+
+#aboutus_sub_heading h2{
+
+    font-size:26px;
+
+}
+
+#aboutus_sub_heading p{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+#aboutus_button button{
+
+    width:100%;
+
+    padding:14px;
+
+}
+
+}
