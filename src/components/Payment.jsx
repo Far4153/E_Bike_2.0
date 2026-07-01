@@ -191,9 +191,8 @@ const Payment= () => {
 
                 <div className="cart-cont">
                 <table>
-                <div style={{ display: 'flex' }} id="head">
-                <h3>Cart Summarys</h3>
-                </div>
+                <h3 id='head'>Cart Summarys</h3>
+                
                 <tbody>
                     {cart.map((product) => (
                       <React.Fragment key={product.id}> 

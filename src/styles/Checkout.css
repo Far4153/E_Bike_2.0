@@ -3,6 +3,12 @@ body{
     color: #ffffff;
 }
 
+html,
+body{
+    overflow-x:hidden;
+}
+
+
 .checkout-page .navbar{
     background-color:#8E2841;
     height: 50px;
@@ -13,7 +19,14 @@ body{
     background-color: #8E2841;
     height: auto; /* Set height to auto */
     position: relative; /* Ensure relative positioning for absolute children */
-    position: fixed;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;      /* instead of width:100% */
+    width:auto;
+    z-index:1000;
+    box-sizing:border-box;
+    background:#8E2841;
   }
 
 .checkout-page .checkout-body{
@@ -87,7 +100,10 @@ body{
 }
 
 .checkout-page .inputs input{
-    width: 350px;
+    width:100%;
+    max-width:350px;
+    height:40px;
+    box-sizing:border-box;
     height: 35px;
     margin-bottom: 20px;
     background-color: black;
@@ -128,15 +144,14 @@ body{
         border-top: 1px solid #ccc; /* Add border-top instead of hr to separate rows */
       } /* Adjust margin as needed */
 
-      .checkout-page table {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-
-
+.checkout-page .cart-summary-sec table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
+
+
+
 .checkout-page #heading2 {
     display: inline-block;
     
@@ -185,7 +200,158 @@ body{
         height:100%;
         width: 400px;
     
-        overflow-y: auto;
+        overflow-x: hidden;
         
     
 }
+cart-summary-sec td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-summary-sec table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.cart-summary-sec td:first-child {
+    width: 70px;
+}
+
+.cart-summary-sec td:last-child {
+    width: auto;
+}
+
+
+
+
+
+
+@media (max-width:768px){
+
+.checkout-page .checkout-body{
+
+    display:flex;
+    flex-direction:column;
+    margin:0;
+
+}
+
+/* Billing section */
+
+.checkout-page .billing-info{
+
+    margin:15px;
+    padding:20px;
+
+}
+
+.checkout-body h1{
+
+    margin:100px 0 30px;
+    text-align:center;
+
+}
+
+/* Progress */
+
+.checkout-page .stages{
+
+    justify-content:center;
+
+}
+
+.checkout-page .stages hr{
+
+    width:90px;
+
+}
+
+.checkout-page .stages img{
+
+    width:55px;
+
+}
+
+/* Inputs */
+
+.checkout-page .billing-info .inputs{
+
+    grid-template-columns:1fr;
+    gap:0;
+
+}
+
+.checkout-page .inputs-left,
+.checkout-page .inputs-right{
+
+    margin:0;
+    gap:0;
+
+}
+
+.checkout-page .inputs input{
+
+    width:100%;
+    box-sizing:border-box;
+
+}
+
+/* Heading */
+
+.checkout-page .billing-info #heading1{
+
+    margin:0 0 30px;
+
+}
+
+/* Buttons */
+
+.checkout-page .btn-sec{
+
+    flex-direction:column;
+    gap:12px;
+
+}
+
+.checkout-page .btn-sec button{
+
+    width:100%;
+
+}
+
+/* Summary */
+
+.checkout-page .cart-summary-sec{
+
+    position:static;
+    width:100%;
+    height:auto;
+    overflow:visible;
+    margin-top:20px;
+
+}
+
+.checkout-page .cart-cont{
+
+    margin:15px;
+
+}
+
+.checkout-page table{
+
+    display:table;
+    width:100%;
+    margin-top:20px;
+
+}
+
+.checkout-page .cart-summary-sec .order{
+
+    margin-top:20px;
+
+}
+
+}
+
