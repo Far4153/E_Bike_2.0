@@ -59,3 +59,12 @@
 width: 400px;
 height: 300px;
 }
+
+
+@media (max-width:768px){ 
+    #confirm-head{
+    font-size: 7vw ;
+    font-weight: bold;
+}
+
+}
