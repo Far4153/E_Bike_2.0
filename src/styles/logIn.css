@@ -1,6 +1,8 @@
 .login-whole{
     background-image: url("/public/loginbg.png");
-    background-size: 100% auto;
+
+    background-size:cover;
+    background-position:center;
     background-repeat: no-repeat;
     background-position: center;
     /* width: 100%; */
@@ -111,12 +113,11 @@
     border: 0;
     background-color: #8E2841;
     color: white;
-    padding-top: 5px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 14px 40px;   /* Increased vertical padding */
     border-radius: 5px;
     font-weight: bold;
     font-size: medium;
+    cursor: pointer;
 }
 
 .login-add{
@@ -134,3 +135,126 @@
     margin-left: 40px;
 }
 
+.login-whole{
+    background-size:cover;
+    background-position:center;
+}
+
+
+@media (max-width: 768px){
+
+.login-whole{
+    height:auto;
+    min-height:100vh;
+    background-size:cover;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+.login-page{
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    height:auto;
+    padding:80px 0 40px;
+}
+
+/* Welcome card */
+
+.login-rectangle{
+    width:100%;
+    max-width:400px;
+    height:auto;
+    padding:30px 20px;
+    box-sizing:border-box;
+}
+
+.login-rectangle-info{
+    width:100%;
+    height:auto;
+    padding:0;
+    text-align:center;
+}
+
+.login-rectangle-info h1{
+    font-size:2rem;
+}
+
+.login-rectangle-info p{
+    font-size:15px;
+}
+
+.login-rectangle-info button{
+    margin-top:15px;
+}
+
+/* Login card */
+
+.login-square{
+    position:static;
+    transform:none;
+    width:100%;
+    max-width:400px;
+    height:auto;
+    margin-top:25px;
+}
+
+.login-square-info{
+    width:100%;
+    height:auto;
+    padding:25px;
+    box-sizing:border-box;
+}
+
+.login-square-info h1{
+    margin:0 0 30px;
+    padding:0;
+    text-align:center;
+    font-size:2rem;
+}
+
+.login-sub{
+    margin:0;
+}
+
+.login-square-info label{
+    padding:0;
+}
+
+.login-square-info input{
+    width:100%;
+    margin:10px 0 20px;
+    box-sizing:border-box;
+}
+
+.login-add{
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    padding:0;
+}
+
+.login-add p{
+    margin:0;
+    text-align:center;
+}
+
+.login-add button{
+    margin:0;
+    width:100%;
+}
+
+/* Back button */
+
+.back-button{
+    position:absolute;
+    top:15px;
+    left:15px;
+}
+
+.back-button button{
+    background:transparent;
+    border:none;
+}
+
+}
